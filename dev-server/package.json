@@ -1,0 +1,16 @@
+{
+  "name": "localServer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.0.8",
+    "express": "^4.5.1",
+    "morgan": "^1.1.1"
+  }
+}
