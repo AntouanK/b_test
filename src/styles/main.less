@@ -4,7 +4,7 @@
 //  colors
 @gray-1: #EEE;
 @gray-2: #DDD;
-@gray-3: #BBB;
+@gray-3: #AAA;
 
 @blue-1: rgb(29, 145, 236);
 @green-1: rgb(64, 173, 64);
@@ -16,6 +16,18 @@
 }
 
 .box {
+
+  -webkit-transition: opacity 0.3s;
+     -moz-transition: opacity 0.3s;
+      -ms-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
   height: 300px;
   background: @gray-1;
   margin: 1em;
