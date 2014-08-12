@@ -2,12 +2,16 @@
   "name": "b_test",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Antonis Karamitros",
   "license": "ISC",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/AntouanK/b_test.git"
+  },
   "dependencies": {
     "event-stream": "^3.1.7",
     "gulp": "^3.8.7",
@@ -21,6 +25,9 @@
     "rimraf": "^2.2.8",
     "run-sequence": "^0.3.6",
     "vinyl-buffer": "0.0.0",
-    "vinyl-source-stream": "^0.1.1"
+    "vinyl-source-stream": "^0.1.1",
+    "compression": "^1.0.8",
+    "express": "^4.5.1",
+    "morgan": "^1.1.1"
   }
 }

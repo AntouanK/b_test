@@ -13,8 +13,8 @@ For this exercise, I made a simple gulp build process, in order to keep my devel
 
 - clone the git repo `git clone https://github.com/AntouanK/b_test.git`
 - install npm packages using `npm i` ( assuming you have node installed )
-- build the project using `npm build`
-- you can start a local server to see the result by giving `gulp serve` ( server will be listening to localhost:8000 )
+- build the project using `gulp build` , output goes to /deploy folder
+- iptionally, you can start a local server to see the result. run `gulp serve` ( server will be listening to localhost:8000 )
 
 ## Build process
 
