@@ -23,10 +23,18 @@ https://github.com/yui/pure/blob/master/LICENSE.md
   margin: 10px auto;
 }
 .box {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0.8;
   height: 300px;
   background: #eeeeee;
   margin: 1em;
   position: relative;
+}
+.box:hover {
+  opacity: 1;
 }
 .box .photo-container {
   position: absolute;
@@ -53,16 +61,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 body {
   font-weight: 300;
 }
-.box {
-  -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -ms-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  opacity: 0.8;
-}
-.box:hover {
-  opacity: 1;
-}
 .box .info-container {
   position: absolute;
   top: 50%;
@@ -73,12 +71,12 @@ body {
   padding: 20px;
 }
 .box .info-container .item-description {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+  font-size: 1.25rem;
+  margin: 5px 0;
 }
 .box .info-container .source-description {
-  color: #bbbbbb;
-  font-size: 1rem;
+  color: #aaaaaa;
+  font-size: 0.8rem;
 }
 .box .info-container .price {
   position: absolute;
@@ -87,14 +85,14 @@ body {
 }
 .box .info-container .price .amount {
   color: #1d91ec;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .box .info-container .price .amount .decimal {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .box .info-container .price .offer {
   color: #40ad40;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding-left: 20px;
 }
 .box.big .info-container {
