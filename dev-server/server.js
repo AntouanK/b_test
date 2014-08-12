@@ -2,11 +2,11 @@
 var http        = require('http'),
     fs          = require('fs'),
     path        = require('path'),
-    express     = require('../node_modules/express'),
+    express     = require('express'),
     // querystring = require('querystring'),
     app         = express(),
-    morgan      = require('../morgan'),
-    compression = require('../compression'),
+    morgan      = require('morgan'),
+    compression = require('compression'),
     //  variables
     deployPath = __dirname + '/../deploy';
 
