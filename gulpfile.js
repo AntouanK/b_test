@@ -23,6 +23,7 @@ var exec          = require('child_process').exec,
     //  gulp plugins
     gulpUtil      = require('gulp-util'),
     less          = require('gulp-less'),
+    minifyHTML    = require('gulp-minify-html'),
     eslint        = require('gulp-eslint'),
     concat        = require('gulp-concat'),
     order         = require('gulp-order'),
@@ -62,7 +63,8 @@ imageFiles = [
   path.join(paths.images, '**/*.less')
 ],
 thirdPartyCss = [
-  path.join(paths.thirdParty, 'css', '*.css')
+  path.join(paths.thirdParty, 'css', 'pure-min.css'),
+  path.join(paths.thirdParty, 'css', 'grids-responsive-min.css')
 ];
 /**********************************************************/
 /** helper functions **/
@@ -161,6 +163,7 @@ gulp.task('write-index-html', function(){
 
   return stream
   .pipe( vinylBuffer() )
+  .pipe( minifyHTML() )
   .pipe( gulp.dest(paths.deploy) );
 });
 
@@ -240,7 +243,7 @@ gulp.task('build', function(taskDone){
 
 //  ======================================================= watchers
 //  main watcher task
-gulp.task('watch', function(){
+gulp.task('watch', ['build'], function(){
 
   gulpUtil.log('watching files...');
 

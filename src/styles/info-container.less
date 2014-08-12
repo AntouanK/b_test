@@ -1,0 +1,67 @@
+/***********************/
+/* info-container.less */
+
+@big-size: 1.5rem;
+@small-size: 1rem;
+
+body {
+  font-weight: 300;
+}
+
+.box {
+
+  //  container for the info text
+  .info-container {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: @gray-1;
+
+    padding: 20px;
+
+    .item-description {
+      font-size: @big-size;
+      margin-bottom: 5px;
+    }
+
+    .source-description {
+      color: @gray-3;
+      font-size: @small-size;
+    }
+
+    .price {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 20px;
+
+      .amount {
+        color: @blue-1;
+        font-size: @big-size;
+
+        .decimal {
+          font-size: @small-size;
+        }
+      }
+
+      .offer {
+        color: @green-1;
+        font-size: @small-size;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  //  overrides for the "big" box
+  &.big {
+
+    .info-container {
+      right: 50%;
+    }
+  }
+
+}
+
+/* info-container.less */
+/***********************/

@@ -1,9 +1,19 @@
 /*************/
 /* main.less */
 
-//  background color
-@gray-1: #dadada;
+//  colors
+@gray-1: #EEE;
+@gray-2: #DDD;
+@gray-3: #BBB;
 
+@blue-1: rgb(29, 145, 236);
+@green-1: rgb(64, 173, 64);
+
+
+.main-grid {
+  max-width: 990px;
+  margin: 10px auto;
+}
 
 .box {
   height: 300px;
@@ -11,39 +21,40 @@
   margin: 1em;
   position: relative;
 
+  //  container for the photo ( img )
   .photo-container {
     position: absolute;
     width: 100%;
     height: 50%;
     overflow: hidden;
+    text-align: center;
 
     img {
-      text-align: center;
+      margin-top: -5%;
       min-width: 100%;
       min-height: 100%;
+
+      &.logo {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+      }
     }
   }
 
-  .info-container {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: @gray-1;
-  }
 
+  //  overrides for the "big" box
   &.big {
 
     .photo-container {
       min-height: 100%;
     }
 
-    .info-container {
-      right: 50%;
-    }
   }
+
 }
+
+@import "info-container";
 
 /* main.less */
 /*************/
