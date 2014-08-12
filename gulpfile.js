@@ -43,6 +43,7 @@ paths.base = '.';
 //  source
 paths.src         = path.join(paths.base, 'src');
 paths.styles      = path.join(paths.src, 'styles');
+paths.images      = path.join(paths.src, 'images');
 paths.markup      = path.join(paths.src, 'markup');
 paths.scripts     = path.join(paths.src, 'scripts');
 paths.thirdParty  = path.join(paths.src, '3rd-party');
@@ -56,6 +57,9 @@ htmlIndexFile = [
 ],
 lessFiles = [
   path.join(paths.styles, '**/*.less')
+],
+imageFiles = [
+  path.join(paths.images, '**/*.less')
 ],
 thirdPartyCss = [
   path.join(paths.thirdParty, 'css', '*.css')
@@ -189,7 +193,7 @@ gulp.task('rebuild-style', function(taskDone){
 gulp.task('image-files', function(taskDone){
 
   gulp
-  .src(paths.src + '/images/**/*.*')
+  .src( path.join( paths.images, '**/*.*') )
   .pipe( gulp.dest(paths.deploy + '/images') )
   .on('end',function(){
       taskDone();
@@ -228,7 +232,7 @@ gulp.task('build', function(taskDone){
 
   runSequence(
     preparationTasks,
-    ['read-index-html', 'styles'/*, 'image-files'*/],
+    ['read-index-html', 'styles', 'image-files'],
     ['inline-css', 'write-index-html'],
     taskDone
   );
@@ -245,6 +249,7 @@ gulp.task('watch', function(){
   //  watch stylesheets
   gulp.watch([thirdPartyCss, lessFiles], ['rebuild-style']);
 
+  gulp.watch([], ['image-files']);
 });
 
 //  watcher for develop
