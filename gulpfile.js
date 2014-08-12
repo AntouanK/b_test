@@ -60,7 +60,7 @@ lessFiles = [
   path.join(paths.styles, '**/*.less')
 ],
 imageFiles = [
-  path.join(paths.images, '**/*.less')
+  path.join(paths.images, '*')
 ],
 thirdPartyCss = [
   path.join(paths.thirdParty, 'css', 'pure-min.css'),
@@ -196,7 +196,7 @@ gulp.task('rebuild-style', function(taskDone){
 gulp.task('image-files', function(taskDone){
 
   gulp
-  .src( path.join( paths.images, '**/*.*') )
+  .src( imageFiles )
   .pipe( gulp.dest(paths.deploy + '/images') )
   .on('end',function(){
       taskDone();
