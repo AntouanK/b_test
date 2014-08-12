@@ -1,6 +1,5 @@
 /*****************************
-  
-  front-end build
+
   gulpfile.js
 
   Antonis Karamitros
@@ -35,7 +34,7 @@ var exec          = require('child_process').exec,
       locale: {},
       inline: {}
     },
-    paths = {};  //  environment is develop by default
+    paths = {};
 
 
 /**********************************************************/
