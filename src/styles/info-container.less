@@ -10,6 +10,18 @@ body {
 
 .box {
 
+  -webkit-transition: opacity 0.3s;
+     -moz-transition: opacity 0.3s;
+      -ms-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+
   //  container for the info text
   .info-container {
     position: absolute;
