@@ -14,7 +14,7 @@ For this exercise, I made a simple gulp build process, in order to keep my devel
 - clone the git repo `git clone https://github.com/AntouanK/b_test.git`
 - install npm packages using `npm i` ( assuming you have node installed )
 - build the project using `gulp build` , output goes to /deploy folder
-- iptionally, you can start a local server to see the result. run `gulp serve` ( server will be listening to localhost:8000 )
+- optionally, you can start a local server to see the result. run `gulp serve` ( server will be listening to localhost:8000 )
 
 ## Build process
 
@@ -35,7 +35,7 @@ Also there is a watcher so tasks are happening while developing ( `gulp watch` )
 ## Implementation
 
 For the implementation, a simple minimalisting CSS framework was used, [Yahoo's Pure](http://purecss.io/).
-The reason was that I always try to use only the bare minimum and only quality 3rdparty libraries, and not bloat my project with unnecessary code.
+The reason was that I always try to use only the bare minimum and only quality 3rdparty libraries, and not bloat my project with unnecessary code and big heavy frameworks.
 
 In this case, pure provides a flexible responsive grid, and it's lightweight.
 
