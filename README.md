@@ -5,7 +5,7 @@
 - [Source code](https://github.com/AntouanK/b_test)
 
 
-Description for the exercise was really simple, given the ai file of a partial page design, implement it with sinmple HTML and CSS.
+Description for the exercise was really simple, given the ai file of a partial page design, implement it with HTML and CSS.
 
 For this exercise, I made a simple gulp build process, in order to keep my develop files separate from the deliverable/deployed output.
 
